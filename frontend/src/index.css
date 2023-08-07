@@ -10,6 +10,8 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
+  /* background-color: #082f49; */
+
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -17,3 +19,27 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(36, 36, 36, 0.6), rgba(36, 36, 36, 1)),
+
+  url('https://images.unsplash.com/photo-1605379399843-5870eea9b74e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2098&q=80')
+  center/cover no-repeat;
+}
+
+
+
+
+  @media screen and (min-width: 768px) {
+    .hero-banner {
+      padding: 0;
+    }
+    .hero-banner p {
+      max-width: 45rem;
+    }
+  }
