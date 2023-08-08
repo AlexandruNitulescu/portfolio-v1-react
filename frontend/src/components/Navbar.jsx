@@ -1,6 +1,4 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import logo from '../img/logo.svg';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -10,49 +8,157 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 z-20 bg-white bg-opacity-90 w-full shadow-xl backdrop-filter backdrop-blur-lg">
+    <nav className="fixed top-0 z-20 bg-white bg-opacity-95 w-full shadow-xl backdrop-filter backdrop-blur-lg">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center">
-          <div className="flex items-center space-x-4">
-            <div>
-              <a to="#about" className="flex items-center py-2 px-2 text-slate-900 hover:text-white">
+          {/* Logo */}
+          <div className="flex items-center">
+            <a className="flex items-center py-2 px-2 text-neutral-900" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" zoomAndPan="magnify" viewBox="0 0 375 149.999998" height="80" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><g/></defs><g fill="#000000" fill-opacity="1"><g transform="translate(17.035982, 83.624997)"><g><path d="M 4.890625 -6.609375 L 8.167969 -14.882812 L 11.421875 -6.609375 Z M 16.046875 0 L 8.167969 -19.21875 L 0.265625 0 L 2.273438 0 L 4.203125 -4.890625 L 12.109375 -4.890625 L 14.039062 0 Z M 16.046875 0 "/></g></g></g><g fill="#000000" fill-opacity="1"><g transform="translate(36.653194, 83.624997)"><g><path d="M 3.832031 -1.851562 L 3.832031 -17.976562 L 1.984375 -17.976562 L 1.984375 0 L 10.257812 0 L 10.257812 -1.851562 Z M 3.832031 -1.851562 "/></g></g></g><g fill="#000000" fill-opacity="1"><g transform="translate(50.74497, 83.624997)"><g><path d="M 12.664062 0 L 12.664062 -1.71875 L 3.832031 -1.71875 L 3.832031 -8.117188 L 12.398438 -8.117188 L 12.398438 -9.859375 L 3.832031 -9.859375 L 3.832031 -16.257812 L 12.664062 -16.257812 L 12.664062 -17.976562 L 1.984375 -17.976562 L 1.984375 0 Z M 12.664062 0 "/></g></g></g><g fill="#000000" fill-opacity="1"><g transform="translate(68.696623, 83.624997)"><g><path d="M 13.191406 0 L 15.464844 0 L 9.148438 -8.988281 L 15.464844 -17.976562 L 13.191406 -17.976562 L 8.011719 -10.3125 L 2.828125 -17.976562 L 0.527344 -17.976562 L 6.875 -8.960938 L 0.554688 0 L 2.828125 0 L 8.011719 -7.667969 Z M 13.191406 0 "/></g></g></g><g fill="#000000" fill-opacity="1"><g transform="translate(88.023015, 83.624997)"><g><path d="M 4.890625 -6.609375 L 8.167969 -14.882812 L 11.421875 -6.609375 Z M 16.046875 0 L 8.167969 -19.21875 L 0.265625 0 L 2.273438 0 L 4.203125 -4.890625 L 12.109375 -4.890625 L 14.039062 0 Z M 16.046875 0 "/></g></g></g><g fill="#000000" fill-opacity="1"><g transform="translate(107.640225, 83.624997)"><g><path d="M 3.832031 -13.246094 L 13.933594 1.109375 L 13.933594 -17.976562 L 12.082031 -17.976562 L 12.082031 -4.757812 L 1.984375 -19.113281 L 1.984375 0 L 3.832031 0 Z M 3.832031 -13.246094 "/></g></g></g><g fill="#000000" fill-opacity="1"><g transform="translate(126.860873, 83.624997)"><g><path d="M 15.941406 -8.988281 C 15.941406 -10.285156 15.675781 -11.472656 15.203125 -12.585938 C 14.726562 -13.695312 14.066406 -14.644531 13.246094 -15.441406 C 12.398438 -16.234375 11.421875 -16.839844 10.3125 -17.289062 C 9.171875 -17.738281 7.957031 -17.976562 6.6875 -17.976562 L 1.984375 -17.976562 L 1.984375 0 L 6.6875 0 C 7.957031 0 9.171875 -0.210938 10.3125 -0.660156 C 11.421875 -1.109375 12.398438 -1.746094 13.246094 -2.539062 C 14.066406 -3.332031 14.726562 -4.257812 15.203125 -5.367188 C 15.675781 -6.476562 15.941406 -7.667969 15.941406 -8.988281 Z M 14.144531 -8.988281 C 14.144531 -6.925781 13.402344 -5.207031 11.976562 -3.859375 C 10.546875 -2.511719 8.804688 -1.851562 6.742188 -1.851562 L 3.832031 -1.851562 L 3.832031 -16.125 L 6.742188 -16.125 C 8.804688 -16.125 10.546875 -15.441406 11.976562 -14.117188 C 13.402344 -12.742188 14.144531 -11.023438 14.144531 -8.988281 Z M 14.144531 -8.988281 "/></g></g></g><g fill="#000000" fill-opacity="1"><g transform="translate(147.297639, 83.624997)"><g><path d="M 3.832031 -8.882812 L 3.832031 -16.207031 L 8.011719 -16.207031 C 9.09375 -16.207031 9.96875 -15.863281 10.628906 -15.175781 C 11.261719 -14.488281 11.605469 -13.640625 11.605469 -12.585938 C 11.605469 -11.527344 11.261719 -10.65625 10.574219 -9.941406 C 9.886719 -9.226562 9.042969 -8.882812 8.011719 -8.882812 Z M 13.457031 -12.558594 C 13.457031 -14.089844 12.875 -15.414062 11.765625 -16.445312 C 10.679688 -17.449219 9.332031 -17.976562 7.746094 -17.976562 L 1.984375 -17.976562 L 1.984375 0 L 3.832031 0 L 3.832031 -7.113281 L 5.976562 -7.113281 L 11.261719 0 L 13.746094 0 L 8.195312 -7.113281 C 9.597656 -7.191406 10.785156 -7.691406 11.765625 -8.617188 C 12.875 -9.648438 13.457031 -10.972656 13.457031 -12.558594 Z M 13.457031 -12.558594 "/></g></g></g><g fill="#000000" fill-opacity="1"><g transform="translate(164.984917, 83.624997)"><g><path d="M 14.988281 -5.949219 L 14.988281 -17.976562 L 13.140625 -17.976562 L 13.140625 -5.683594 C 13.140625 -4.945312 13.007812 -4.335938 12.742188 -3.832031 C 11.976562 -2.351562 10.496094 -1.613281 8.300781 -1.613281 C 6.875 -1.613281 5.738281 -1.929688 4.890625 -2.5625 C 3.914062 -3.277344 3.4375 -4.308594 3.4375 -5.683594 L 3.4375 -17.976562 L 1.585938 -17.976562 L 1.585938 -5.949219 C 1.585938 -3.992188 2.222656 -2.457031 3.488281 -1.347656 C 4.679688 -0.289062 6.292969 0.238281 8.300781 0.238281 C 10.285156 0.238281 11.871094 -0.289062 13.085938 -1.347656 C 14.355469 -2.457031 14.988281 -3.992188 14.988281 -5.949219 Z M 14.988281 -5.949219 "/></g></g></g><g fill="#000000" fill-opacity="1"><g transform="translate(184.866496, 83.624997)"><g/></g></g><g fill="#000000" fill-opacity="1"><g transform="translate(195.3016, 83.624997)"><g><path d="M 15.703125 0 L 15.703125 -17.976562 L 11.738281 -17.976562 L 11.738281 -6.769531 L 5.550781 -17.976562 L 1.585938 -17.976562 L 1.585938 0 L 5.550781 0 L 5.550781 -11.210938 L 11.738281 0 Z M 15.703125 0 "/></g></g></g><g fill="#000000" fill-opacity="1"><g transform="translate(215.896996, 83.624997)"><g><path d="M 5.550781 0 L 5.550781 -17.976562 L 1.585938 -17.976562 L 1.585938 0 Z M 5.550781 0 "/></g></g></g><g fill="#000000" fill-opacity="1"><g transform="translate(226.340407, 83.624997)"><g><path d="M 9.226562 -14.382812 L 14.355469 -14.382812 L 14.355469 -17.976562 L 0.132812 -17.976562 L 0.132812 -14.382812 L 5.261719 -14.382812 L 5.261719 0 L 9.226562 0 Z M 9.226562 -14.382812 "/></g></g></g><g fill="#000000" fill-opacity="1"><g transform="translate(244.133434, 83.624997)"><g><path d="M 12.082031 -17.976562 L 12.082031 -7.585938 C 12.082031 -5.101562 11.339844 -3.703125 8.617188 -3.703125 C 5.921875 -3.703125 5.15625 -5.101562 5.15625 -7.585938 L 5.15625 -17.976562 L 1.191406 -17.976562 L 1.191406 -7.007812 C 1.191406 -2.222656 3.9375 0.265625 8.617188 0.265625 C 13.296875 0.265625 16.046875 -2.222656 16.046875 -7.007812 L 16.046875 -17.976562 Z M 12.082031 -17.976562 "/></g></g></g><g fill="#000000" fill-opacity="1"><g transform="translate(264.675955, 83.624997)"><g><path d="M 12.003906 -3.59375 L 5.550781 -3.59375 L 5.550781 -7.21875 L 11.738281 -7.21875 L 11.738281 -10.8125 L 5.550781 -10.8125 L 5.550781 -14.382812 L 12.003906 -14.382812 L 12.003906 -17.976562 L 1.585938 -17.976562 L 1.585938 0 L 12.003906 0 Z M 12.003906 -3.59375 "/></g></g></g><g fill="#000000" fill-opacity="1"><g transform="translate(281.5701, 83.624997)"><g><path d="M 1.585938 0 L 12.003906 0 L 12.003906 -3.59375 L 5.550781 -3.59375 L 5.550781 -17.976562 L 1.585938 -17.976562 Z M 1.585938 0 "/></g></g></g><g fill="#000000" fill-opacity="1"><g transform="translate(297.803314, 83.624997)"><g><path d="M 8.566406 -2.800781 C 6.609375 -2.800781 4.917969 -3.78125 4.8125 -5.921875 L 0.792969 -5.921875 C 0.820312 -1.535156 4.441406 0.421875 8.40625 0.421875 C 12.082031 0.421875 15.863281 -1.136719 15.863281 -5.367188 C 15.863281 -12.214844 5.472656 -9.914062 5.472656 -13.113281 C 5.472656 -14.460938 7.03125 -14.988281 8.144531 -14.988281 C 10.125 -14.988281 11.210938 -14.382812 11.421875 -12.503906 L 15.253906 -12.503906 C 15.121094 -16.601562 11.792969 -18.242188 8.089844 -18.242188 C 4.8125 -18.242188 1.375 -16.496094 1.375 -12.796875 C 1.375 -6.160156 11.765625 -8.40625 11.765625 -4.917969 C 11.765625 -3.304688 9.808594 -2.800781 8.566406 -2.800781 Z M 8.566406 -2.800781 "/></g></g></g><g fill="#000000" fill-opacity="1"><g transform="translate(317.764212, 83.624997)"><g><path d="M 14.566406 -6.105469 C 13.828125 -4.519531 12.027344 -3.4375 10.179688 -3.4375 C 7.269531 -3.4375 4.945312 -5.921875 4.945312 -8.988281 C 4.945312 -12.027344 7.269531 -14.539062 10.179688 -14.539062 C 12.003906 -14.539062 13.800781 -13.535156 14.539062 -11.921875 L 18.957031 -11.921875 C 17.738281 -15.597656 14.277344 -18.242188 10.179688 -18.242188 C 5.074219 -18.242188 0.925781 -14.089844 0.925781 -8.988281 C 0.925781 -3.886719 5.074219 0.265625 10.179688 0.265625 C 14.277344 0.265625 17.765625 -2.40625 18.980469 -6.105469 Z M 14.566406 -6.105469 "/></g></g></g><g fill="#000000" fill-opacity="1"><g transform="translate(340.712533, 83.624997)"><g><path d="M 12.082031 -17.976562 L 12.082031 -7.585938 C 12.082031 -5.101562 11.339844 -3.703125 8.617188 -3.703125 C 5.921875 -3.703125 5.15625 -5.101562 5.15625 -7.585938 L 5.15625 -17.976562 L 1.191406 -17.976562 L 1.191406 -7.007812 C 1.191406 -2.222656 3.9375 0.265625 8.617188 0.265625 C 13.296875 0.265625 16.046875 -2.222656 16.046875 -7.007812 L 16.046875 -17.976562 Z M 12.082031 -17.976562 "/></g></g></g></svg>
-
-              </a>
-            </div>
-            <div className="hidden md:flex items-center space-x-3">
-              <a href="/docs" className="relative group py-5 px-3 text-slate-900 uppercase font-sans font-medium text-base tracking-wide transition duration-300 hover:text-blue-400">
-                About
-              </a>
-              <a href="/docs" className="relative group py-5 px-3 text-slate-900 uppercase font-sans font-medium text-base tracking-wide transition duration-300 hover:text-blue-400">
-                Portfolio
-              </a>
-              <a href="/docs" className="relative group py-5 px-3 text-slate-900 uppercase font-sans font-medium text-base tracking-wide transition duration-300 hover:text-blue-400">
-                Contact
-              </a>
-            </div>
+            </a>
+          </div>
+          {/* Desktop */}
+          <div className="hidden md:flex items-center space-x-4 flex-1 justify-center">
+            <a href="#about" className="relative group py-5 text-stone-900 uppercase font-sans font-medium text-base tracking-wide transition duration-300 hover:text-blue-500" style={{ scrollBehavior: 'smooth' }}>
+              About
+            </a>
+            <a href="#portfolio" className="relative group py-5 text-stone-900 uppercase font-sans font-medium text-base tracking-wide transition duration-300 hover:text-blue-500">
+              Portfolio
+            </a>
+            <a href="#contact" className="relative group py-5 text-stone-900 uppercase font-sans font-medium text-base tracking-wide transition duration-300 hover:text-blue-500">
+              Contact
+            </a>
+          </div>
+          {/* List */}
+          <div className="hidden md:flex items-center">
+            <ul className="flex items-center justify-center space-x-4 text-sm font-medium text-stone-900">
+                <li className='flex items-center justify-center'>
+                    <a href="https://www.linkedin.com/in/alexandru-nitulescu-035778153/" className="hover:text-blue-500 ">
+                        <svg
+                          viewBox="0 0 960 1000"
+                          fill="currentColor"
+                          height="2.2em"
+                          width="2.2em"
+                        >
+                          <path d="M480 20c133.333 0 246.667 46.667 340 140s140 206.667 140 340c0 132-46.667 245-140 339S613.333 980 480 980c-132 0-245-47-339-141S0 632 0 500c0-133.333 47-246.667 141-340S348 20 480 20M362 698V386h-96v312h96m-48-352c34.667 0 52-16 52-48s-17.333-48-52-48c-14.667 0-27 4.667-37 14s-15 20.667-15 34c0 32 17.333 48 52 48m404 352V514c0-44-10.333-77.667-31-101s-47.667-35-81-35c-44 0-76 16.667-96 50h-2l-6-42h-84c1.333 18.667 2 52 2 100v212h98V518c0-12 1.333-20 4-24 8-25.333 24.667-38 50-38 32 0 48 22.667 48 68v174h98" />
+                        </svg>
+                    </a>
+                </li>
+                <li className='flex items-center justify-center'>
+                    <a href="https://www.fiverr.com/alexandru_nit" className="hover:text-blue-500">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        height="3em"
+                        width="3em"
+                      >
+                        <path d="M23.004 15.588a.995.995 0 10.002-1.99.995.995 0 00-.002 1.99zm-.996-3.705h-.85c-.546 0-.84.41-.84 1.092v2.466h-1.61v-3.558h-.684c-.547 0-.84.41-.84 1.092v2.466h-1.61v-4.874h1.61v.74c.264-.574.626-.74 1.163-.74h1.972v.74c.264-.574.625-.74 1.162-.74h.527v1.316zm-6.786 1.501h-3.359c.088.546.43.858 1.006.858.43 0 .732-.175.83-.487l1.425.4c-.351.848-1.22 1.364-2.255 1.364-1.748 0-2.549-1.355-2.549-2.515 0-1.14.703-2.505 2.45-2.505 1.856 0 2.471 1.384 2.471 2.408 0 .224-.01.37-.02.477zm-1.562-.945c-.04-.42-.342-.81-.889-.81-.508 0-.81.225-.908.81h1.797zM7.508 15.44h1.416l1.767-4.874h-1.62l-.86 2.837-.878-2.837H5.72l1.787 4.874zm-6.6 0H2.51v-3.558h1.524v3.558h1.591v-4.874H2.51v-.302c0-.332.235-.536.606-.536h.918V8.412H2.85c-1.162 0-1.943.712-1.943 1.755v.4H0v1.316h.908v3.558z" />
+                      </svg>
+                    </a>
+                </li>
+                <li className='flex items-center justify-center'>
+                    <a href="https://www.upwork.com/freelancers/~01e9f117e5b28701da?viewMode=1" class="hover:text-blue-500">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      height="2em"
+                      width="2em"
+                    >
+                      <path d="M17.47 6.07a4.54 4.54 0 00-4.38 3.69 19.9 19.9 0 01-2.28-4.9H8.55v6a2.14 2.14 0 11-4.28 0v-6L2 4.91v6a4.4 4.4 0 108.8-.05v-1a20.55 20.55 0 001.65 2.7l-1.38 6.61h2.32l1-4.81a5.61 5.61 0 003.11.89 4.57 4.57 0 000-9.14zm0 6.83a4.09 4.09 0 01-2.55-1l.23-.91v-.05c.16-1 .66-2.6 2.35-2.6a2.25 2.25 0 012.27 2.24 2.41 2.41 0 01-2.27 2.32z" />
+                    </svg>
+                    </a>
+                </li>
+                <li className='flex items-center justify-center'>
+                    <a href="https://github.com/AlexandruNitulescu" class="mr-2 hover:text-blue-500">
+                      <svg viewBox="0 0 1024 1024" fill="currentColor" height="2em" width="2em">
+                        <path d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0138.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z" />
+                      </svg>
+                    </a>
+                </li>
+            </ul>
           </div>
 
+          {/* Mobile Menu */}
           <div className="md:hidden flex items-center">
             <button className="mobile-menu-button" onClick={toggleMobileMenu}>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 text-slate-900">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                className="w-6 h-6 text-slate-900"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
               </svg>
             </button>
           </div>
         </div>
       </div>
-      <div className={`mobile-menu ${isMobileMenuOpen ? '' : 'hidden'} bg-white border-y`}>
-        <a to="/about" className="flex items-center p-2 text-slate-800  hover:bg-gray-100 group">
+      {/* Mobile Menu */}
+      <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} md:hidden p-4 bg-white border-y`}>
+        <a href="#about" className="flex items-center p-2 text-neutral-900 hover:bg-gray-100 group uppercase font-sans font-medium text-base tracking-wide transition duration-300 hover:text-blue-500">
           About
         </a>
-        <a to="/docs" className="flex items-center p-2 text-slate-800  hover:bg-gray-100  group">
-          Documentation
+        <a href="#portfolio" className="flex items-center p-2 text-neutral-900 hover:bg-gray-100 group uppercase uppercase font-sans font-medium text-base tracking-wide transition duration-300 hover:text-blue-500">
+          Portfolio
         </a>
-        <a to="#contact" className="flex items-center p-2 text-slate-800    hover:bg-gray-100  group">
+        <a href="#contact" className="flex items-center p-2 text-neutral-900 hover:bg-gray-100 group uppercase uppercase font-sans font-medium text-base tracking-wide transition duration-300 hover:text-blue-500">
           Contact
+        </a>
+        <a href="" className='border-t-2 border-gray-200'>
+          <ul class=" border-t-2 border-gray-200 mt-4 flex items-center justify-center text-sm font-medium text-stone-900">
+              <li className='flex items-center justify-center mt-4'>
+                  <a href="https://www.linkedin.com/in/alexandru-nitulescu-035778153/" class="mr-4 hover:text-blue-500 md:mr-6 ">
+                      <svg
+                        viewBox="0 0 960 1000"
+                        fill="currentColor"
+                        height="2.2em"
+                        width="2.2em"
+                      >
+                        <path d="M480 20c133.333 0 246.667 46.667 340 140s140 206.667 140 340c0 132-46.667 245-140 339S613.333 980 480 980c-132 0-245-47-339-141S0 632 0 500c0-133.333 47-246.667 141-340S348 20 480 20M362 698V386h-96v312h96m-48-352c34.667 0 52-16 52-48s-17.333-48-52-48c-14.667 0-27 4.667-37 14s-15 20.667-15 34c0 32 17.333 48 52 48m404 352V514c0-44-10.333-77.667-31-101s-47.667-35-81-35c-44 0-76 16.667-96 50h-2l-6-42h-84c1.333 18.667 2 52 2 100v212h98V518c0-12 1.333-20 4-24 8-25.333 24.667-38 50-38 32 0 48 22.667 48 68v174h98" />
+                      </svg>
+                  </a>
+
+              </li>
+              <li className='flex items-center justify-center mt-4'>
+                  <a href="https://www.fiverr.com/alexandru_nit" class="mr-4 hover:text-blue-500 md:mr-6">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      height="3em"
+                      width="3em"
+                    >
+                      <path d="M23.004 15.588a.995.995 0 10.002-1.99.995.995 0 00-.002 1.99zm-.996-3.705h-.85c-.546 0-.84.41-.84 1.092v2.466h-1.61v-3.558h-.684c-.547 0-.84.41-.84 1.092v2.466h-1.61v-4.874h1.61v.74c.264-.574.626-.74 1.163-.74h1.972v.74c.264-.574.625-.74 1.162-.74h.527v1.316zm-6.786 1.501h-3.359c.088.546.43.858 1.006.858.43 0 .732-.175.83-.487l1.425.4c-.351.848-1.22 1.364-2.255 1.364-1.748 0-2.549-1.355-2.549-2.515 0-1.14.703-2.505 2.45-2.505 1.856 0 2.471 1.384 2.471 2.408 0 .224-.01.37-.02.477zm-1.562-.945c-.04-.42-.342-.81-.889-.81-.508 0-.81.225-.908.81h1.797zM7.508 15.44h1.416l1.767-4.874h-1.62l-.86 2.837-.878-2.837H5.72l1.787 4.874zm-6.6 0H2.51v-3.558h1.524v3.558h1.591v-4.874H2.51v-.302c0-.332.235-.536.606-.536h.918V8.412H2.85c-1.162 0-1.943.712-1.943 1.755v.4H0v1.316h.908v3.558z" />
+                    </svg>
+                  </a>
+              </li>
+              <li className='flex items-center justify-center mt-4'>
+                  <a href="https://www.upwork.com/freelancers/~01e9f117e5b28701da?viewMode=1" class="mr-4 hover:text-blue-500 md:mr-6">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    height="2em"
+                    width="2em"
+                  >
+                    <path d="M17.47 6.07a4.54 4.54 0 00-4.38 3.69 19.9 19.9 0 01-2.28-4.9H8.55v6a2.14 2.14 0 11-4.28 0v-6L2 4.91v6a4.4 4.4 0 108.8-.05v-1a20.55 20.55 0 001.65 2.7l-1.38 6.61h2.32l1-4.81a5.61 5.61 0 003.11.89 4.57 4.57 0 000-9.14zm0 6.83a4.09 4.09 0 01-2.55-1l.23-.91v-.05c.16-1 .66-2.6 2.35-2.6a2.25 2.25 0 012.27 2.24 2.41 2.41 0 01-2.27 2.32z" />
+                  </svg>
+                  </a>
+              </li>
+              <li className='flex items-center justify-center mt-4'>
+                  <a href="https://github.com/AlexandruNitulescu" class="mr-4 hover:text-blue-500 md:mr-6">
+                    <svg viewBox="0 0 1024 1024" fill="currentColor" height="2em" width="2em">
+                      <path d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0138.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z" />
+                    </svg>
+                  </a>
+              </li>
+          </ul>
         </a>
       </div>
     </nav>
   );
-};
+}
