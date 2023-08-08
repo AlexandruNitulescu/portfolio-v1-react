@@ -7,7 +7,7 @@ const Contact = () => {
     const message = event.target.message.value;
 
     try {
-        const response = await fetch('http://localhost:8000/api/message', {
+        const response = await fetch('https://alexandrunitulescu-backend.onrender.com/api/message', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',

@@ -33,3 +33,7 @@ async def submit_form(form_email: str = Form(...), form_subject: str = Form(...)
     finally:
         db.close()
     return JSONResponse(content={"message": "Data stored successfully."}, status_code=200)
+
+@app.get("/api/test")
+def read_root():
+    return {"message": "FastAPI backend is running!"}
