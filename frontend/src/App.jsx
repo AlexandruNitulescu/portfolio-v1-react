@@ -4,7 +4,6 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Reminder from './components/Reminder';
 import Portfolio from './components/Portfolio';
-import SocialMediaBanner from './components/SocialMediaBanner';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
 import Services from './components/Services';

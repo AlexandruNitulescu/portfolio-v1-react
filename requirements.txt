@@ -1,0 +1,12 @@
+fastapi
+sqlalchemy
+python-decouple
+jinja2
+psycopg2
+requests
+pandas
+python-jose[cryptography]
+passlib[bcrypt]
+pydantic[email]
+python-multipart
+uvicorn
