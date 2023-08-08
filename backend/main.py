@@ -10,7 +10,11 @@ app = FastAPI()
 models.Base.metadata.create_all(bind=engine)
 
 
-origins = ["http://localhost:3000", "http://localhost:8000", "http://localhost:5173"]
+origins = [
+    "http://localhost:3000", 
+    "http://localhost:8000",  
+    "https://alexandrunitulescu.onrender.com"  
+]
 
 
 app.add_middleware(
