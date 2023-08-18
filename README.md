@@ -1,6 +1,6 @@
 # portfolio-v1-react
-** ⚠️ OBS **: The website may take some time to load due to being hosted on a free subscription plan. Your patience is appreciated!
-Website - https://alexandrunitulescu.onrender.com/
+⚠️ **OBS!**: The website may take some time to load due to being hosted on a free subscription plan. Your patience is appreciated!
+🌐 **Website Link**: - https://alexandrunitulescu.onrender.com/
 
 ## Overview
 Marrying the strengths of FastAPI, React with Vite.js, and Postgres, this project offers a fusion of speed, interactivity, and reliability. Styled using the utility-first TailwindCSS, it seamlessly merges functionality with modern aesthetics, making it an excellent resource for beginners and experts alike.
