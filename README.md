@@ -21,8 +21,8 @@ Marrying the strengths of FastAPI, React with Vite.js, and Postgres, this projec
 📬 Messaging Feature:
 * Visitors can engage through an integrated messaging system.
 
-![Uploading p1.png…]()
-![Uploading p2.png…]()
-![Uploading p3.png…]()
-![Uploading p4.png…]()
-![p5](https://github.com/AlexandruNitulescu/portfolio-v1-react/assets/61834395/236dacaf-7e30-42ee-a396-9d295ae70c30)
+![p1](https://github.com/AlexandruNitulescu/portfolio-v1-react/assets/61834395/4cbf6442-89d0-42c4-b610-80e5d778e137)
+![p2](https://github.com/AlexandruNitulescu/portfolio-v1-react/assets/61834395/291e6fa1-d855-4e5d-9f7e-61c2303401cb)
+![p3](https://github.com/AlexandruNitulescu/portfolio-v1-react/assets/61834395/43b7d248-0adb-416e-afdd-c5f4c7679c53)
+![p4](https://github.com/AlexandruNitulescu/portfolio-v1-react/assets/61834395/7ff46cdc-b27d-4874-ac3c-1f5bbcf98024)
+![p5](https://github.com/AlexandruNitulescu/portfolio-v1-react/assets/61834395/d577aece-f885-4d2d-9844-5a2cc9c9638d)
